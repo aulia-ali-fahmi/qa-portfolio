@@ -31,7 +31,11 @@ Severity scale: **High** = a core function is broken and the user cannot reach t
 - **Expected:** Characters appear in Last Name.
 - **Actual:** Nothing appears in Last Name. Each typed character instead appears in the First Name field, replacing its content with a single letter. Pasting also fails and the text lands in First Name.
 - **Additional difference:** With `problem_user`, Continue is blocked with the message "Last Name is required". With `error_user`, Last Name also cannot be filled (typing, paste, and browser history dropdown all fail), but Continue is **not** blocked and the flow proceeds with an empty Last Name.
-- **Screenshot:** `screenshots/bug1-lastname.jpg`
+- **Screenshot:**
+
+![BUG-01 Last name field](screenshots/bug1-lastname.jpg)
+
+
 
 ### BUG-02: Checkout can be completed with an empty cart
 - **Severity:** Medium. Empty orders go through to completion, which can pollute order data and load the PDF generation.
@@ -43,7 +47,12 @@ Severity scale: **High** = a core function is broken and the user cannot reach t
   4. Fill in any name and postal code, click Continue, then Finish
 - **Expected:** Checkout is refused because the cart is empty.
 - **Actual:** The "Checkout: Complete!" page appears, and the generated PDF is empty.
-- **Screenshot:** `screenshots/bug2-empty-cart.jpg`
+- **Screenshot:**
+
+![BUG-02 Empty cart](screenshots/bug2-empty-cart.jpg)
+
+
+
 
 ### BUG-03: Sorting does not work
 - **Severity:** Medium
@@ -54,7 +63,11 @@ Severity scale: **High** = a core function is broken and the user cannot reach t
   3. Select any option (Name A-Z, Name Z-A, Price low-high, Price high-low)
 - **Expected:** The list is reordered.
 - **Actual:** A popup appears: "Sorting is broken! This error has been reported to Backtrace." The order does not change. This happens for all four sort options. With `problem_user` the sort does nothing and shows no message.
-- **Screenshot:** `screenshots/bug3-sort-error.jpg`
+- **Screenshot:**
+
+![BUG-03 Sort error](screenshots/bug3-sort-error.jpg)
+
+
 
 ### BUG-04: Product detail page shows a different product
 - **Severity:** High. Users see wrong information about what they are buying.
@@ -64,7 +77,11 @@ Severity scale: **High** = a core function is broken and the user cannot reach t
   2. Click a product on the list
 - **Expected:** The detail page shows the product that was clicked.
 - **Actual:** The detail page shows a different product with a different description. (`standard_user` shows correct details.)
-- **Screenshot:** `screenshots/bug4-wrong-detail.jpg`
+- **Screenshot:**
+
+![BUG-04 Wrong detail](screenshots/bug4-wrong-detail.jpg)
+
+
 
 ### BUG-05: Some "Add to cart" buttons do not work
 - **Severity:** High
@@ -74,7 +91,12 @@ Severity scale: **High** = a core function is broken and the user cannot reach t
   2. Click "Add to cart" on each product, one by one
 - **Expected:** All six buttons add the item (the button changes to "Remove" and the cart badge increases).
 - **Actual:** Some buttons do nothing: the cart badge does not increase. Affected products: [list which ones]. With `standard_user` all six work.
-- **Screenshot:** `screenshots/bug5-add-to-cart.jpg`
+- **Screenshot:**
+
+![BUG-05 Add to cart](screenshots/bug5-add-to-cart.jpg)
+
+
+
 
 ### BUG-06: Postal code accepts letters with no validation
 - **Severity:** Medium. Invalid data is stored in orders. Combined with BUG-02, junk orders can pass through the whole flow.
@@ -86,7 +108,12 @@ Severity scale: **High** = a core function is broken and the user cannot reach t
   4. Click Continue
 - **Expected:** A validation message that the postal code is invalid.
 - **Actual:** The form accepts it and proceeds to Checkout Overview.
-- **Screenshot:** `screenshots/bug6-zip-letters.jpg`
+- **Screenshot:**
+
+![BUG-06 Zip letters](screenshots/bug6-zip-letters.jpg)
+
+
+
 
 ### BUG-07: Finish button does not respond
 - **Severity:** High. The order cannot be completed.
@@ -97,7 +124,12 @@ Severity scale: **High** = a core function is broken and the user cannot reach t
   3. On Checkout Overview, click Finish
 - **Expected:** The "Checkout: Complete!" page appears.
 - **Actual:** Nothing happens, the order cannot be completed.
-- **Screenshot:** `screenshots/bug7-finish.jpg`
+- **Screenshot:**
+
+![BUG-07 Finish](screenshots/bug7-finish.jpg)
+
+
+
 
 ---
 
