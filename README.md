@@ -145,10 +145,6 @@ Severity scale: **High** = a core function is broken and the user cannot reach t
 - Form fields use placeholder text that disappears when the cursor enters the field. Persistent labels (First Name, Last Name, Postal Code) would be clearer.
 - The checkout has no basic safeguards that a real store would have (validation of empty cart, shipping options, payment choices). This is expected for a demo site.
 
-## Real-World Example
-
-Beyond practice sites, I investigated a regression bug in the open-source editor Notepad3 (issue #5990): pasting multi-line text into the Replace with / Search string fields. I compared a stable version (7.26.426.1) against the newer one (7.26.602.1) and posted the findings in the issue: [link]
-
 ---
 
 *This is a sample report written to show my testing and reporting format. It is not professional QA work history.*
